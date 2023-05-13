@@ -235,19 +235,19 @@ public class MainTest extends BaseDriverParameter {
 
     @Test(priority = 7,dependsOnMethods = "orderComputerTest")
     @Parameters("itemName")
-    void ParametreliSeacrhText(String isim)
+    void ParametreliSeacrhText(String name)
     {
         driver.get("https://demo.nopcommerce.com/");
 
         WebElement searchBox = driver.findElement(By.cssSelector("[class='search-box-text ui-autocomplete-input']"));
-        searchBox.sendKeys(isim);
+        searchBox.sendKeys(name);
 
         WebElement searchButton = driver.findElement(By.cssSelector("[class='button-1 search-box-button']"));
         searchButton.click();
 
         WebElement urun = wait.until(ExpectedConditions.visibilityOfElementLocated(By.linkText("Adobe Photoshop CS4")));
 
-        Assert.assertTrue(urun.getText().contains(isim),"test failed");
+        Assert.assertTrue(urun.getText().contains(name),"test failed");
 
     }
 }
