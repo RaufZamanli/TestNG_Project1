@@ -61,7 +61,7 @@ public class BaseDriverParameter {
     }
 
     @AfterClass
-   public void bitishIshlemleri() {
+   public void afterwardOperations() {
 
         Tools.Wait(4);
         driver.quit();
