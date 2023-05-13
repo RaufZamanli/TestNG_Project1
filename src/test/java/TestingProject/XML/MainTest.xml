@@ -9,7 +9,7 @@
         <parameter name="browserType" value="chrome"></parameter>
         <parameter name="itemName" value="Adobe Photoshop CS4"></parameter>
         <classes>
-            <class name="TestingProje4.MainTest"></class>
+            <class name="TestingProject.MainTest"></class>
         </classes>
     </test>
 </suite>
